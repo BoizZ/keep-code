@@ -1,0 +1,19 @@
+{
+  "name": "keep-code",
+  "version": "1.0.0",
+  "description": "if nothing to do, let's me code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheogo/keep-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheogo/keep-code/issues"
+  },
+  "homepage": "https://github.com/cheogo/keep-code#readme"
+}
