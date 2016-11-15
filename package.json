@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/cheogo/keep-code#readme",
   "dependencies": {
-    "koa": "^2.0.0"
+    "koa": "^1.2.4"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
