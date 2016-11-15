@@ -1,0 +1,31 @@
+{
+  "name": "keep-code",
+  "version": "1.0.0",
+  "description": "if nothing to do, let's me code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --inline --hot",
+    "builddoc": "gitbook build ./src/components/doc/ ./src/public/doc/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheogo/keep-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheogo/keep-code/issues"
+  },
+  "homepage": "https://github.com/cheogo/keep-code#readme",
+  "dependencies": {
+    "koa": "^1.2.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
