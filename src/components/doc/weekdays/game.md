@@ -2,4 +2,5 @@
 
 ## 平日里写的一些游戏
 
-* [贪吃蛇大战2](http://127.0.0.1:3000/game/snake.html)
+<a href="../../game/snake.html" target="_blank">贪吃蛇大战2</a>
+<!-- * [](./game/snake.html) -->
