@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>游戏 · GitBook</title>
+        <title>koa · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../experience.html" />
+    <link rel="next" href="../weekdays.html" />
     
-    
-    <link rel="prev" href="../weekdays.html" />
     
 
     </head>
@@ -129,9 +127,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../demo/koa.html">
+        <li class="chapter active" data-level="1.3.1" data-path="koa.html">
             
-                <a href="../demo/koa.html">
+                <a href="koa.html">
             
                     
                     koa
@@ -161,9 +159,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="game.html">
+        <li class="chapter " data-level="1.4.1" data-path="../weekdays/game.html">
             
-                <a href="game.html">
+                <a href="../weekdays/game.html">
             
                     
                     游戏
@@ -241,7 +239,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >游戏</a>
+        <a href=".." >koa</a>
     </h1>
 </div>
 
@@ -256,15 +254,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5E73;&#x65E5;&#x91CC;&#x5199;&#x7684;&#x4E00;&#x4E9B;&#x6E38;&#x620F;">&#x5E73;&#x65E5;&#x91CC;&#x5199;&#x7684;&#x4E00;&#x4E9B;&#x6E38;&#x620F;</h2><ul>
-    <li><a href="../../game/snake.html" target="_blank">&#x8D2A;&#x5403;&#x86C7;&#x5927;&#x6218;2</a></li>
-    <li><a href="../../game/flybird.html" target="_blank">flybird&#x5F31;&#x9E21;&#x7248;</a></li>
-</ul>
+                                <h2 id="koa">koa</h2><hr><p><a href="http://koa.bootcss.com/" target="_blank">&#x4E2D;&#x6587;&#x7AD9;&#x5730;&#x5740;</a>
+<a href="http://koajs.com/" target="_blank">&#x82F1;&#x6587;&#x7AD9;&#x5730;&#x5740;</a></p><h4 id="installation">Installation</h4><pre><code class="lang-javascript">npm install koa</code></pre>
+<h4 id="hello-world">Hello World</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>);
+<span class="hljs-keyword">var</span> app = koa();
 
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> *(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">this</span>.body = <span class="hljs-string">&apos;Hello World&apos;</span>;
+});
 
+app.listen(<span class="hljs-number">3000</span>);</code></pre>
+<h4 id="set-x-response-time-demo">SET X-Response-Time DEMO</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>);
+<span class="hljs-keyword">var</span> app = koa();
 
+<span class="hljs-comment">// x-response-time</span>
 
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> *(<span class="hljs-params">next</span>)</span>{
+  <span class="hljs-keyword">var</span> start = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>;
+  <span class="hljs-keyword">yield</span> next;
+  <span class="hljs-keyword">var</span> ms = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span> - start;
+  <span class="hljs-keyword">this</span>.set(<span class="hljs-string">&apos;X-Response-Time&apos;</span>, ms + <span class="hljs-string">&apos;ms&apos;</span>);
+});
 
+<span class="hljs-comment">// logger</span>
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> *(<span class="hljs-params">next</span>)</span>{
+  <span class="hljs-keyword">var</span> start = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>;
+  <span class="hljs-keyword">yield</span> next;
+  <span class="hljs-keyword">var</span> ms = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span> - start;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;%s %s - %s&apos;</span>, <span class="hljs-keyword">this</span>.method, <span class="hljs-keyword">this</span>.url, ms);
+});
+
+<span class="hljs-comment">// response</span>
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> *(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">this</span>.body = <span class="hljs-string">&apos;Hello World&apos;</span>;
+});
+
+app.listen(<span class="hljs-number">3000</span>);</code></pre>
 
                                 
                                 </section>
@@ -292,12 +319,8 @@
 
             
                 
-                <a href="../weekdays.html" class="navigation navigation-prev " aria-label="Previous page: 平日代码">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="../experience.html" class="navigation navigation-next " aria-label="Next page: 边角经验">
+                <a href="../weekdays.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 平日代码">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -308,7 +331,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"游戏","level":"1.4.1","depth":2,"next":{"title":"边角经验","level":"1.5","depth":1,"path":"experience.md","ref":"experience.md","articles":[{"title":"github","level":"1.5.1","depth":2,"path":"experience/github.md","ref":"experience/github.md","articles":[]}]},"previous":{"title":"平日代码","level":"1.4","depth":1,"path":"weekdays.md","ref":"weekdays.md","articles":[{"title":"游戏","level":"1.4.1","depth":2,"path":"weekdays/game.md","ref":"./weekdays/game.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"weekdays/game.md","mtime":"2016-11-16T02:59:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-16T06:14:23.776Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"koa","level":"1.3.1","depth":2,"next":{"title":"平日代码","level":"1.4","depth":1,"path":"weekdays.md","ref":"weekdays.md","articles":[{"title":"游戏","level":"1.4.1","depth":2,"path":"weekdays/game.md","ref":"./weekdays/game.md","articles":[]}]},"previous":{"title":"DEMO","level":"1.3","depth":1,"ref":"","articles":[{"title":"koa","level":"1.3.1","depth":2,"path":"demo/koa.md","ref":"demo/koa.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"demo/koa.md","mtime":"2016-11-16T06:14:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-16T06:14:23.776Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
