@@ -22,4 +22,4 @@ git push -u origin gh-pages
 //或者
 git push -u origin HEAD
 ```
-
+4. 访问`https://[username].github.io/[repo]/[all url]`
