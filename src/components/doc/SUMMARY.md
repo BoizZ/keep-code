@@ -3,6 +3,7 @@
 * [概览](overview.md)
 * DEMO
 	* [koa](demo/koa.md)
+	* [babel](demo/babel.md)
 * [平日代码](weekdays.md)
 	* [游戏](./weekdays/game.md)
 * [边角经验](experience.md)
