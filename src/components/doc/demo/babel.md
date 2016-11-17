@@ -13,21 +13,21 @@ $ npm install --global babel-cli
 $ npm install --save-dev babel-register
 ```
 2.安装语法解析包
-```javascript
+```
 # ES2015转码规则
 $ npm install --save-dev babel-preset-es2015
 # react转码规则
 $ npm install --save-dev babel-preset-react
 ```
 3.配置`.babelrc`
-```
+```javascript
 {
     "presets": [ "es2015", "react" ],
     "plugins": []
 }
 ```
 4.使用
-```
+```javascript
 // 直接运行
 $ babel-node es6.js
 // 代码中添加
