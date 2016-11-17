@@ -273,19 +273,19 @@
 $ npm install --global babel-cli
 # &#x4F7F;&#x7528; babel-register&#xFF08;require&#x94A9;&#x5B50;&#xFF09;
 $ npm install --save-dev babel-register</code></pre>
-<p>2.&#x5B89;&#x88C5;&#x8BED;&#x6CD5;&#x89E3;&#x6790;&#x5305;</p><pre><code class="lang-javascript"># ES2015&#x8F6C;&#x7801;&#x89C4;&#x5219;
+<p>2.&#x5B89;&#x88C5;&#x8BED;&#x6CD5;&#x89E3;&#x6790;&#x5305;</p><pre><code># ES2015&#x8F6C;&#x7801;&#x89C4;&#x5219;
 $ npm install --save-dev babel-preset-es2015
 # react&#x8F6C;&#x7801;&#x89C4;&#x5219;
 $ npm install --save-dev babel-preset-react</code></pre>
-<p>3.&#x914D;&#x7F6E;<code>.babelrc</code></p><pre><code>{
-    &quot;presets&quot;: [ &quot;es2015&quot;, &quot;react&quot; ],
-    &quot;plugins&quot;: []
+<p>3.&#x914D;&#x7F6E;<code>.babelrc</code></p><pre><code class="lang-javascript">{
+    <span class="hljs-string">&quot;presets&quot;</span>: [ <span class="hljs-string">&quot;es2015&quot;</span>, <span class="hljs-string">&quot;react&quot;</span> ],
+    <span class="hljs-string">&quot;plugins&quot;</span>: []
 }</code></pre>
-<p>4.&#x4F7F;&#x7528;</p><pre><code>// &#x76F4;&#x63A5;&#x8FD0;&#x884C;
+<p>4.&#x4F7F;&#x7528;</p><pre><code class="lang-javascript"><span class="hljs-comment">// &#x76F4;&#x63A5;&#x8FD0;&#x884C;</span>
 $ babel-node es6.js
-// &#x4EE3;&#x7801;&#x4E2D;&#x6DFB;&#x52A0;
-require(&quot;babel-register&quot;);
-require(&quot;./index.js&quot;);
+<span class="hljs-comment">// &#x4EE3;&#x7801;&#x4E2D;&#x6DFB;&#x52A0;</span>
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;babel-register&quot;</span>);
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./index.js&quot;</span>);
 </code></pre>
 <p>5.&#x606D;&#x559C;&#x5B8C;&#x6210;&#x2705;</p><hr><h3 id="&#x8BE6;&#x89E3;">&#x8BE6;&#x89E3;</h3><hr><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;babelrc">&#x914D;&#x7F6E;&#x6587;&#x4EF6;.babelrc</h4><p>Babel&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;<code>.babelrc</code>&#xFF0C;&#x5B58;&#x653E;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x3002;&#x4F7F;&#x7528;Babel&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x5C31;&#x662F;&#x914D;&#x7F6E;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p><p>&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x7684;&#x89C4;&#x5219;&#x96C6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x3002;</p><pre><code class="lang-javascript"># ES2015&#x8F6C;&#x7801;&#x89C4;&#x5219;
 $ npm install --save-dev babel-preset-es2015
@@ -395,7 +395,7 @@ babel.transformFromAst(ast, code, options);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"babel","level":"1.3.2","depth":2,"next":{"title":"平日代码","level":"1.4","depth":1,"path":"weekdays.md","ref":"weekdays.md","articles":[{"title":"游戏","level":"1.4.1","depth":2,"path":"weekdays/game.md","ref":"./weekdays/game.md","articles":[]}]},"previous":{"title":"koa","level":"1.3.1","depth":2,"path":"demo/koa.md","ref":"demo/koa.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"demo/babel.md","mtime":"2016-11-17T07:30:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-17T07:30:23.876Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"babel","level":"1.3.2","depth":2,"next":{"title":"平日代码","level":"1.4","depth":1,"path":"weekdays.md","ref":"weekdays.md","articles":[{"title":"游戏","level":"1.4.1","depth":2,"path":"weekdays/game.md","ref":"./weekdays/game.md","articles":[]}]},"previous":{"title":"koa","level":"1.3.1","depth":2,"path":"demo/koa.md","ref":"demo/koa.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"demo/babel.md","mtime":"2016-11-17T07:48:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-17T07:50:12.458Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
