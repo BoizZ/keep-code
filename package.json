@@ -4,7 +4,6 @@
   "description": "if nothing to do, let's me code",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --inline --hot",
     "builddoc": "gitbook build ./src/components/doc/ ./src/public/doc/"
   },
