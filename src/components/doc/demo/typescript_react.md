@@ -1,5 +1,16 @@
 ## React + Typescript + Webpack 开发环境配置
 
+对于复杂或多人开发的 `React` 项目来说，管理和使用每个组件的 `props` 、 `state` 或许会成为一件让人头痛的事情，而为每一个组件写文档，成本也会比较大，对项目的开发效率也不是最理想的。
+
+`Typescript` 给 `React` 带来很多好处：
+
+ - 在组件头部定义 `interface`，让每个人在拿到组件的第一时间就可以很明确知道该组件需要使用的 `props` 和 `state`；
+ - 在编译中发现问题，减少运行时的报错；
+ - 可以在编辑器中实现实时类型校验、引用查询；
+ - 约束类型，在混合多语言环境中降低风险，等。
+
+且配置也是非常简单，步骤如下。
+
 ### 文件目录
 
 ``` bash
@@ -27,9 +38,9 @@ npm init
 
 ``` bash
 npm i -g webpack webpack-dev-server
-npm i --save-dev react react-dom @types/react @types/react-dom
-npm i --save ts-loader source-map-loader
-npm link --save webpack webpack-dev-server
+npm i --save react react-dom @types/react @types/react-dom
+npm i --save-dev ts-loader source-map-loader
+npm link webpack webpack-dev-server typescript
 ```
 
 #### 配置 webpack
@@ -37,7 +48,7 @@ npm link --save webpack webpack-dev-server
 ``` js
 /* build/webpack.config.js */
 const config = {
-  entry: './Yoda/index.tsx',
+  entry: './app/index.tsx',
   output: {
     filename: 'app.bundle.js',
     path: './public',
@@ -135,7 +146,7 @@ render(<App />, document.getElementById('app'))
 #### 启动项目
 
 ``` bash
-webpack-dev-server --inline --config build/webpack.config.dev.js --content-base build
+webpack-dev-server --inline --config build/webpack.config.js --content-base build --open
 ```
 
 :smirk: :smirk: :smirk: 出来吧神龙
@@ -179,7 +190,7 @@ const config = {
 ``` json
 {
   "scripts": {
-    "dev": "webpack-dev-server --inline --config build/webpack.config.dev.js --content-base build",
+    "dev": "webpack-dev-server --inline --config build/webpack.config.js --content-base build --open",
   },
 }
 ```
@@ -197,14 +208,15 @@ npm run dev
 ```
 npm i -g tslint
 cd my-project
-tslint init
+tslint --init
 ```
 
 这样会在项目文件中创建一个现成的 `tslint` 配置文件： `tslint.json` ，个性化方案可以自行设置。
 
 ### 参考
+
 > [webpack 新官网](https://webpack.js.org/)  
 > [webpack dev server](https://webpack.github.io/docs/webpack-dev-server.html)  
 > [tsconfig.json 配置文档](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)  
 > [style-loader](https://github.com/webpack/style-loader)  
-> [tslint](https://github.com/palantir/tslint)  
+> [tslint](https://github.com/palantir/tslint)
